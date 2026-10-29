@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reports - CineBook Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css?v=2">
+</head>
+<body data-root="../" data-page="admin-reports">
+
+  <div class="d-flex flex-column flex-md-row">
+    <aside class="admin-side" id="adminSide"></aside>
+
+    <main class="flex-grow-1 p-3 p-md-4" style="min-width:0">
+      <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-2">
+        <h3 class="section-title mb-0">Reports</h3>
+        <button class="btn btn-outline-light btn-sm" onclick="window.print()"><i class="bi bi-printer me-1"></i>Print Report</button>
+      </div>
+
+      <div class="row g-3 mb-4" id="sumCards"></div>
+
+      <div class="row g-4 mb-4">
+        <div class="col-lg-7"><div class="card-dark p-3"><h6>Revenue by Movie</h6><div style="height:290px"><canvas id="chMovie"></canvas></div></div></div>
+        <div class="col-lg-5"><div class="card-dark p-3"><h6>Payment Mode</h6><div style="height:290px"><canvas id="chPay"></canvas></div></div></div>
+        <div class="col-lg-7"><div class="card-dark p-3"><h6>Bookings - last 7 days</h6><div style="height:260px"><canvas id="chDays"></canvas></div></div></div>
+        <div class="col-lg-5"><div class="card-dark p-3"><h6>Seat Type Sold</h6><div style="height:260px"><canvas id="chSeat"></canvas></div></div></div>
+      </div>
+
+      <div class="card-dark p-3">
+        <h6 class="mb-3">Movie-wise Summary</h6>
+        <div class="table-responsive">
+          <table class="table table-dark table-sm align-middle mb-0">
+            <thead><tr><th>Movie</th><th class="text-end">Bookings</th><th class="text-end">Tickets</th><th class="text-end">Revenue</th></tr></thead>
+            <tbody id="sumBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script src="../js/data.js?v=2"></script>
+  <script src="../js/common.js?v=2"></script>
+  <script src="../js/admin.js?v=2"></script>
+  <script src="../js/admin-reports.js?v=2"></script>
+</body>
+</html>
