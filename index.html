@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CineBook - Book Movie Tickets Online</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body data-page="home">
+
+  <div id="navbar"></div>
+
+  <main class="container mt-4">
+
+    <!-- top banner slider -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner" id="heroSlides"></div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- quick search -->
+    <div class="card-dark p-3 mt-4">
+      <form id="quickSearch" class="row g-2 align-items-center">
+        <div class="col-md-6">
+          <input type="text" id="qsText" class="form-control" placeholder="Search by movie title...">
+        </div>
+        <div class="col-md-4">
+          <select id="qsLang" class="form-select">
+            <option value="">All Languages</option>
+          </select>
+        </div>
+        <div class="col-md-2 d-grid">
+          <button class="btn btn-brand" type="submit"><i class="bi bi-search me-1"></i>Search</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- now showing -->
+    <div class="d-flex justify-content-between align-items-center mt-5 mb-3">
+      <h4 class="section-title mb-0">Now Showing</h4>
+      <a href="movies.html" class="small">View all &rarr;</a>
+    </div>
+    <div class="row g-3" id="nowShowing"></div>
+
+    <!-- coming soon -->
+    <h4 class="section-title mt-5 mb-3">Coming Soon</h4>
+    <div class="row g-3" id="comingSoon"></div>
+
+    <!-- how it works -->
+    <h4 class="section-title mt-5 mb-3">How to Book Tickets</h4>
+    <div class="row g-3 text-center">
+      <div class="col-6 col-md-3"><div class="card-dark p-3 h-100"><i class="bi bi-film fs-2 text-brand"></i><div class="mt-2 fw-semibold">1. Choose a Movie</div><div class="small text-muted">Select the movie you would like to watch</div></div></div>
+      <div class="col-6 col-md-3"><div class="card-dark p-3 h-100"><i class="bi bi-clock fs-2 text-brand"></i><div class="mt-2 fw-semibold">2. Select a Show Time</div><div class="small text-muted">Choose your preferred date and time slot</div></div></div>
+      <div class="col-6 col-md-3"><div class="card-dark p-3 h-100"><i class="bi bi-grid-3x3-gap fs-2 text-brand"></i><div class="mt-2 fw-semibold">3. Select Seats</div><div class="small text-muted">Pick your preferred seats</div></div></div>
+      <div class="col-6 col-md-3"><div class="card-dark p-3 h-100"><i class="bi bi-ticket-perforated fs-2 text-brand"></i><div class="mt-2 fw-semibold">4. Confirm Your Ticket</div><div class="small text-muted">Complete the payment and receive your ticket</div></div></div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/data.js?v=2"></script>
+  <script src="js/common.js?v=2"></script>
+  <script src="js/home.js?v=2"></script>
+</body>
+</html>
